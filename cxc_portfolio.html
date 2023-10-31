@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta name="robots" content="noindex">
+    <title>Portfolio</title>
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../ios_icon.png" rel="apple-touch-icon">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>img {
+        display: block;
+        width: 200px
+    }
+
+    .text-footer {
+        color: #fff
+    }
+
+    @media (prefers-color-scheme: light) {
+        .text {
+            color: #000
+        }
+    }
+
+    @media (max-width: 750px) {
+        img {
+            width: 50%
+        }
+    }
+
+    #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30px
+    }
+
+
+    .image-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .image-box {
+        flex: 1;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 100%; /* makes it square */
+    }
+
+    .image-box img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .container-iframe {
+        position: relative;
+        overflow: hidden;
+        width: 85%;
+        height: 85%;
+        padding-top: 75.5%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+
+    /* Then style the iframe to fit in the container div with full height and width */
+    .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 85%;
+        padding-bottom: -10%;
+    }
+
+    #roundbox {
+        margin-left: 20%;
+        margin-right: 20%;
+        position: static
+    }
+
+    @media screen and (max-width: 1250px) {
+        #roundbox {
+            margin-left: 315px;
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    .photo-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .photo {
+        width: 30%;
+        max-width: 300px;
+        height: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+        transition: transform .5s;
+    }
+
+    .photo:hover{
+        transform: scale(1.1);
+    }
+    </style>
+</head>
+<body>
+<header>
+    <div class="picture">
+        <center>
+            <main class="site-content col-xs-12 col-md-9" id="content" role="main">
+                <div class="site-content-inner"><a href="./">
+                    <picture>
+                        <source media="(prefers-color-scheme: dark)" srcset="name.png">
+                        <img alt="Website logo" class="logo" height="auto" src="name-light.png" width="225px"></picture>
+                </a></div>
+            </main>
+        </center>
+    </div>
+</header>
+<div class="container" style="display:flex;height:100px">
+    <center>
+        <div class="text">
+            <div id="roundbox">
+
+                <div class="container">
+                    <div class="image"><img align="right" alt="A picture of myself!" border="2px" hspace="15"
+                                            src="../images/profile.jpeg" vspace="5"></div>
+                    <div class="text"><p align="left" style="font-size:20px"><strong>Steven R. Seiden</strong><br>Undergraduate
+                        Student<br>Computer Science, B.S.<br>Roger Hadfield Ogden Honors College<br>Louisiana State
+                        University</p></div>
+                </div>
+                <p align="left" style="font-size:16px"><br><strong>👋 Hi! Welcome to my communication portfolio.
+                    This portfolio is part of my work towards becoming an LSU CxC Distinguished Communicator. Here
+                    you can find examples of my written, spoken, visual and technological work.<br><br><br><br><br><br>
+                </p></div>
+        </div>
+
+        <div class="text">
+            <div id="roundbox">
+
+                <h3>Written Samples</h3>
+
+                <p align="center" style="font-size:16px">
+                    The following are examples of written work I have written/contributed to for conference
+                    presentations:<br><br>
+                    </p><p align="left" style="font-size:16px">
+                    • Paper Resulting From Our Csc 4700 Class Project: <a
+                        href="https://dl.acm.org/doi/10.1145/3595353.3595886" style="">Soares, N., Seiden, S., Baggili,
+                    I., & Webb, A. (2023, July). On the Application of Synthetic Media to Penetration Testing. In <i>Proceedings
+                        of the 2nd Workshop on Security Implications of Deepfakes and Cheapfakes </i> (pp.
+                    1-10).</a><br><br>
+                    • Poster Presentation Abstract From the LSU MIST Lab: <a
+                        href="https://www.ieee-security.org/TC/SP2023/downloads/SP23-posters/sp23-posters-paper34-final_version_2_page_abstract.pdf"
+                        style="">Seiden, S., Huang, L., & Wang, C. Poster: Snooping Online Form Choice Privacy in Video
+                    Calls. pp. 1-10).</a>
+                </p>
+
+                </a><br>
+
+            </div>
+        </div>
+
+
+        <div class="text">
+            <div id="roundbox">
+
+                <h3>Spoken</h3>
+            </div>
+        </div>
+
+        <div class="text">
+            <div id="roundbox">
+                <h3>Poster Presentations</h3>
+
+                <p align="center" style="font-size:16px">
+                    Below are examples of poster presentations I've presented.
+                </p>
+
+                <div class="container-iframe">
+                    <iframe class="responsive-iframe" frameBorder="0"
+                            src="https://www.files.sseiden.com/Posters/Decoding_Poseidon.pdf"></iframe>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text">
+            <div id="roundbox">
+
+                <h3>Advertisements</h3>
+
+                <p align="center" style="font-size:16px">
+                    Below are examples of advertisements I created during my time as an officer of Effective Altruism at LSU.
+                </p>
+
+                <div class="photo-container" style="padding-top: 2%; padding-bottom: 4%; padding-left: 4%;padding-right: 4%">
+                    <img src="images/ea1.png" alt="Concepts Workshop Advertisement" class="photo">
+                    <img src="images/ea2.png" alt="Games Night Advertisement" class="photo">
+                    <img src="images/ea3.png" alt="Idea Program Advertisement" class="photo">
+                </div>
+
+                <div class="photo-container" style="padding-bottom: 4%;padding-left: 4%;padding-right: 4%">
+                    <img src="images/ea4.png" alt="Summer Program Infopost" class="photo">
+                    <img src="images/ea5.png" alt="Summer Program Advertisement" class="photo">
+                    <img src="images/ea6.png" alt="Kickoff Meeting Advertisement" class="photo">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text">
+            <div id="roundbox">
+
+                <h3>Technological</h3>
+            </div>
+        </div>
+    </center>
+</div>
+</body>
+</html>

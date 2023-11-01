@@ -3,45 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta name="robots" content="noindex">
+    <meta content="noindex" name="robots">
     <title>Portfolio</title>
     <link href="https://www.sseiden.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="https://www.sseiden.com/ios_icon.png" rel="apple-touch-icon">
     <link href="https://www.sseiden.com/css/style.css" rel="stylesheet">
+    <link href="/css/popup.css" rel="stylesheet">
     <style>img {
         display: block;
         width: 200px
     }
-
     .text-footer {
         color: #fff
     }
-
     @media (prefers-color-scheme: light) {
         .text {
             color: #000
         }
     }
-
     @media (max-width: 750px) {
         img {
             width: 50%
         }
     }
-
     #footer {
         position: absolute;
         bottom: 0;
         width: 100%;
         height: 30px
     }
-
-
     .image-container {
         display: flex;
         justify-content: space-between;
     }
-
     .image-box {
         flex: 1;
         margin: 10px;
@@ -49,22 +43,19 @@
         overflow: hidden;
         padding-bottom: 100%; /* makes it square */
     }
-
     .image-box img {
         position: absolute;
         width: 100%;
         height: auto;
         object-fit: cover;
     }
-
     .container-iframe {
         position: relative;
         overflow: hidden;
-        width: 85%;
-        height: 85%;
+        width: 100%;
+        height: 100%;
         padding-top: 75.5%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     }
-
     /* Then style the iframe to fit in the container div with full height and width */
     .responsive-iframe {
         position: absolute;
@@ -73,16 +64,14 @@
         bottom: 0;
         right: 0;
         width: 100%;
-        height: 85%;
+        height: 100%;
         padding-bottom: -10%;
     }
-
     #roundbox {
         margin-left: 20%;
         margin-right: 20%;
         position: static
     }
-
     @media screen and (max-width: 1250px) {
         #roundbox {
             margin-left: 315px;
@@ -90,12 +79,10 @@
             margin-left: 0;
         }
     }
-
     .photo-container {
         display: flex;
         justify-content: space-between;
     }
-
     .photo {
         width: 30%;
         max-width: 300px;
@@ -103,9 +90,23 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
         transition: transform .5s;
     }
-
-    .photo:hover{
+    .photo:hover {
         transform: scale(1.1);
+    }
+    .showPopupText {
+        color: #FB0029;
+        cursor: pointer;
+    }
+
+    html, body {
+        background-image: url("../background.png");
+    }
+
+    /*Light mode*/
+    @media (prefers-color-scheme: light) {
+        html, body {
+            background-image: url("background-light.png");
+        }
     }
     </style>
 </head>
@@ -114,11 +115,15 @@
     <div class="picture">
         <center>
             <main class="site-content col-xs-12 col-md-9" id="content" role="main">
-                <div class="site-content-inner"><a href="./">
-                    <picture>
-                        <source media="(prefers-color-scheme: dark)" srcset="https://www.sseiden.com/name.png">
-                        <img alt="Website logo" class="logo" height="auto" src="https://www.sseiden.com/name-light.png" width="225px"></picture>
-                </a></div>
+                <div class="site-content-inner">
+                    <a href="./">
+                        <picture>
+                            <source media="(prefers-color-scheme: dark)" srcset="https://www.sseiden.com/name.png">
+                            <img alt="Website logo" class="logo" height="auto" src="https://www.sseiden.com/name-light.png"
+                                 width="225px">
+                        </picture>
+                    </a>
+                </div>
             </main>
         </center>
     </div>
@@ -127,29 +132,65 @@
     <center>
         <div class="text">
             <div id="roundbox">
-
                 <div class="container">
                     <div class="image"><img align="right" alt="A picture of myself!" border="2px" hspace="15"
                                             src="https://www.sseiden.com/images/profile.jpeg" vspace="5"></div>
-                    <div class="text"><p align="left" style="font-size:20px"><strong>Steven R. Seiden</strong><br>Undergraduate
-                        Student<br>Computer Science, B.S.<br>Roger Hadfield Ogden Honors College<br>Louisiana State
-                        University</p></div>
+                    <div class="text">
+                        <p align="left" style="font-size:20px"><strong>Steven R. Seiden</strong><br>Undergraduate
+                            Student<br>Computer Science, B.S.<br>Roger Hadfield Ogden Honors College<br>Louisiana State
+                            University
+                        </p>
+                    </div>
                 </div>
-                <p align="left" style="font-size:16px"><br><strong>👋 Hi! Welcome to my communication portfolio.
+                <p align="left" style="font-size:16px"><br><strong>👋 Hi, Welcome to my portfolio!
                     This portfolio is part of my work towards becoming an LSU CxC Distinguished Communicator. Here
-                    you can find examples of my written, spoken, visual and technological work. You can access my resume here: <br><br><br><br><br><br>
-                </p></div>
+                    you can find examples of my written, spoken, visual and technological work.
+                    <br><br>You can access my resume <a
+                            href="resume.pdf"
+                            style="">here</a>.<br>
+                </p>
+            </div>
         </div>
-
         <div class="text">
             <div id="roundbox">
-
+                <h3>About Me</h3>
+                <div class="image">
+                    <img align="left" alt="A picture of myself!" border="2px" hspace="15"
+                         src="images/spm.png" style="width: 40%" vspace="5">
+                    <div class="text">
+                        <p align="left" style="font-size:16px">I'm a senior computer science undergraduate
+                            concentrating in
+                            cybersecurity at Louisiana State University's Ogden Honors College. I love doing exciting novel
+                            research and teaching others; my goal is to go into academia, where I can enjoy doing both of
+                            these! I enjoy photography, cooking, yoga, badminton, cycling and taking care of my many
+                            houseplants.
+                            I have a strong interest
+                            in Unix security and system internals, which is what I plan to pursue in graduate
+                            school.<br><br>
+                            I am the Point Secretary for the
+                            <a href="https://www.spmlsu.org/leadership"> Society of Peer Mentors (SPM)</a>
+                            at LSU. As Point Secretary I maintain accurate records of 141 undergraduate students’
+                            involvement
+                            in K-12 outreach activities and help organize our monthly meetings. Pictured to the left is
+                            me with the other members of my house within SPM.I also help to represent LSU's undergraduate
+                            research initiatives office, LSU Discover, as an
+                            <a href="https://lsu.edu/discover/students/research-ambassadors.php">LSU Research Ambassador</a>.
+                            <br><br>
+                        </p>
+                    </div>
+                </div>
+                <p align="left" style="font-size:16px">
+                </p>
+            </div>
+        </div>
+        <div class="text">
+            <div id="roundbox">
                 <h3>Written Samples</h3>
-
                 <p align="center" style="font-size:16px">
                     The following are examples of written work I have written/contributed to for conference
                     presentations:<br><br>
-                    </p><p align="left" style="font-size:16px">
+                </p>
+                <p align="left" style="font-size:16px">
                     • Paper Resulting From Our Csc 4700 Class Project: <a
                         href="https://dl.acm.org/doi/10.1145/3595353.3595886" style="">Soares, N., Seiden, S., Baggili,
                     I., & Webb, A. (2023, July). On the Application of Synthetic Media to Penetration Testing. In <i>Proceedings
@@ -160,66 +201,109 @@
                         style="">Seiden, S., Huang, L., & Wang, C. Poster: Snooping Online Form Choice Privacy in Video
                     Calls. pp. 1-10).</a>
                 </p>
-
                 </a><br>
-
             </div>
         </div>
-
-
-        <div class="text">
-            <div id="roundbox">
-
-                <h3>Spoken</h3>
-            </div>
-        </div>
-
-        <div class="text">
-            <div id="roundbox">
-                <h3>Poster Presentations</h3>
-
-                <p align="center" style="font-size:16px">
-                    Below are examples of poster presentations I've presented.
-                </p>
-
+        <div class="popup" id="ricePoster">
+            <div class="popup-content" id="roundbox">
+                <span class="close">&times;</span>
                 <div class="container-iframe">
                     <iframe class="responsive-iframe" frameBorder="0"
                             src="https://www.files.sseiden.com/Posters/Decoding_Poseidon.pdf"></iframe>
                 </div>
-
             </div>
         </div>
-
+        <div class="popup" id="mistPoster">
+            <div class="popup-content" id="roundbox">
+                <span class="close">&times;</span>
+                <div class="container-iframe">
+                    <iframe class="responsive-iframe" frameBorder="0"
+                            src="https://www.files.sseiden.com/Posters/Snooping_Form_Choices.pdf"></iframe>
+                </div>
+            </div>
+        </div>
         <div class="text">
             <div id="roundbox">
-
-                <h3>Advertisements</h3>
-
+                <h3>Spoken</h3>
+                <p align="center" style="font-size:16px">Coming Soon!</p>
+            </div>
+        </div>
+        <div class="text">
+            <div id="roundbox">
+                <h3>Poster Presentations</h3>
                 <p align="center" style="font-size:16px">
-                    Below are examples of advertisements I created during my time as an officer of Effective Altruism at LSU.
+                    Below are examples of poster presentations I've presented.
                 </p>
-
-                <div class="photo-container" style="padding-top: 2%; padding-bottom: 4%; padding-left: 4%;padding-right: 4%">
-                    <img src="images/ea1.png" alt="Concepts Workshop Advertisement" class="photo">
-                    <img src="images/ea2.png" alt="Games Night Advertisement" class="photo">
-                    <img src="images/ea3.png" alt="Idea Program Advertisement" class="photo">
-                </div>
-
-                <div class="photo-container" style="padding-bottom: 4%;padding-left: 4%;padding-right: 4%">
-                    <img src="images/ea4.png" alt="Summer Program Infopost" class="photo">
-                    <img src="images/ea5.png" alt="Summer Program Advertisement" class="photo">
-                    <img src="images/ea6.png" alt="Kickoff Meeting Advertisement" class="photo">
-                </div>
-
+                <figure style="display: inline-block; width: 40%">
+                    <img alt='Presenting a Poster Presentation on my work at Rice University to a group of people'
+                         class="photo"
+                         src='images/posterRice.png' style="width: 100%"/>
+                    <u><a class="showPopupText" id="showRicePoster"><br>Poster Presentation on My Work at Rice
+                        University</a></u>
+                </figure>
+                <figure style="display: inline-block;">
+                    <img alt='Standing in Front of a Poster Presentation of My Webcam Privacy Work in the LSU MIST Lab'
+                         class="photo"
+                         src='images/posterDD.png' style="width: 100%"/>
+                    <u><a class="showPopupText" id="showMistPoster"><br>Poster Presentation of My Webcam <br>Privacy
+                        Work in the LSU MIST Lab</a></u>
+                </figure>
             </div>
         </div>
-
         <div class="text">
             <div id="roundbox">
-
-                <h3>Technological</h3>
+                <h3>Advertisements</h3>
+                <p align="center" style="font-size:16px">
+                    Below are examples of advertisements I created during my time as an officer of Effective Altruism at
+                    LSU.
+                </p>
+                <div class="photo-container"
+                     style="padding-top: 2%; padding-bottom: 4%; padding-left: 4%;padding-right: 4%">
+                    <img alt="Concepts Workshop Advertisement" class="photo" src="images/ea1.png">
+                    <img alt="Games Night Advertisement" class="photo" src="images/ea2.png">
+                    <img alt="Idea Program Advertisement" class="photo" src="images/ea3.png">
+                </div>
+                <div class="photo-container" style="padding-bottom: 4%;padding-left: 4%;padding-right: 4%">
+                    <img alt="Summer Program Infopost" class="photo" src="images/ea4.png">
+                    <img alt="Summer Program Advertisement" class="photo" src="images/ea5.png">
+                    <img alt="Kickoff Meeting Advertisement" class="photo" src="images/ea6.png">
+                </div>
             </div>
         </div>
+        <!-- <div class="text">
+           <div id="roundbox">
+
+               <h3>Technological</h3>
+           </div>
+           </div> -->
+        <script>
+            /*Modified content from https://www.w3schools.com/howto/howto_css_modals.asp*/
+            const ricePoster = document.getElementById("ricePoster");
+            document.getElementById("showRicePoster").onclick = function () {
+                ricePoster.style.display = "block";
+            }
+            document.getElementsByClassName("close")[0].onclick = function () {
+                ricePoster.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target === ricePoster) {
+                    ricePoster.style.display = "none";
+                }
+            }
+
+            const mistPoster = document.getElementById("mistPoster");
+            document.getElementById("showMistPoster").onclick = function () {
+                mistPoster.style.display = "block";
+            }
+            document.getElementsByClassName("close")[1].onclick = function () {
+                mistPoster.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target === mistPoster) {
+                    mistPoster.style.display = "none";
+                }
+            }
+        </script>
     </center>
 </div>
 </body>

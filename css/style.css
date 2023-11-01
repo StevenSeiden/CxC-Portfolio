@@ -106,6 +106,6 @@ html, body {
 /*Light mode*/
 @media (prefers-color-scheme: light) {
     html, body {
-        background-image: url("background-light.png");
+        background-image: url("../background-light.png");
     }
 }

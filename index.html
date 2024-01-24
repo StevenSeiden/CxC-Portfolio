@@ -12,7 +12,7 @@
     <link href="/css/style.css" rel="stylesheet">
 
 </head>
-<body>
+<body><!--
 <header>
     <div class="picture">
         <center>
@@ -29,14 +29,38 @@
             </main>
         </center>
     </div>
-</header>
+</header>-->
 <div class="container" style="display:flex;height:100px">
+    <sidebar id="sidebar-content" text="#948FFF">
+        <td align="left" class="content-box">
+            <label for="sidebar-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="text">
+                <div id="sidebar">
+                    <p align="center">
+                        <strong>Links</strong> <br>
+                        <a href="./index.html" style="text-decoration: none;">ℹ️ About Me</a><br>
+                        <a href="./research.html" style="text-decoration: none;">📖 Research</a><br>
+                        <a href="./experience.html" style="text-decoration: none;">💼 Experiences</a><br>
+                        <a href="./involvement.html" style="text-decoration: none;">🏫 Involvement</a><br>
+                        <a href="https://www.linkedin.com/in/steven-seiden/" style="text-decoration: none;">👥 LinkedIn
+                            profile</a><br>
+                    </p>
+                </div>
+            </div>
+        </td>
+    </sidebar>
+
     <center>
+
         <div class="text">
             <div id="roundbox">
                 <div class="container">
                     <div class="image"><img align="right" alt="A picture of myself!" border="2px" hspace="15"
-                                            src="https://www.sseiden.com/images/profile.jpeg" vspace="5"></div>
+                                            src="images/profile.jpg" vspace="5"></div>
                     <div class="text">
                         <p align="left" style="font-size:20px"><strong>Steven R. Seiden</strong><br>Undergraduate
                             Student<br>Computer Science, B.S.<br>Roger Hadfield Ogden Honors College<br>Louisiana State
@@ -44,12 +68,14 @@
                         </p>
                     </div>
                 </div>
-                <p align="left" style="font-size:16px"><br><strong>👋 Hi, Welcome to my portfolio!
-                    This portfolio is part of my work towards becoming an LSU CxC Distinguished Communicator. Here
-                    you can find examples of my written, spoken, visual and technological work.
-                    <br><br>You can access my resume <a
-                            href="resume.pdf"
-                            style="">here</a>.<br>
+                <p align="left" style="font-size:16px"><br><strong>👋 Hi, welcome to my portfolio!
+                    This portfolio is part of my work towards becoming an
+                    <a href="https://www.lsu.edu/academicaffairs/cxc/distinguished-communicator-program.php"> CxC Distinguished Communicator</a>. The
+                    LSU CxC program is an initiative by LSU for students to learn to communicate effectively through
+                    different means.
+                    <br><br>
+
+                    <center> You can access my resume <a href="resume.pdf" target="_blank">here</a>.</center>
                 </p>
             </div>
         </div>
@@ -57,121 +83,32 @@
             <div id="roundbox">
                 <h3>About Me</h3>
                 <div class="image">
-                    <img align="left" alt="A picture of myself!" border="2px" hspace="15"
-                         src="images/spm.png" style="width: 40%" vspace="5">
+
+
+                    <img  align="center" alt="A picture of myself!" border="2px" hspace="15" src="images/spm.png" style="width: 75%">
+
                     <div class="text">
                         <p align="left" style="font-size:16px">I'm a senior computer science undergraduate
                             concentrating in
-                            cybersecurity at Louisiana State University's Ogden Honors College. I love doing exciting novel
-                            research and teaching others; my goal is to go into academia, where I can enjoy doing both of
-                            these! I enjoy photography, cooking, yoga, badminton, cycling and taking care of my many
-                            houseplants.
+                            cybersecurity at Louisiana State University's Ogden Honors College.
+                            <br><br>
                             I have a strong interest
                             in Unix security and system internals, which is what I plan to pursue in graduate
                             school.<br><br>
-                            I am the Point Secretary for the
-                            <a href="https://www.spmlsu.org/leadership"> Society of Peer Mentors (SPM)</a>
+                            I am also the Point Secretary for the
+                            <a href="https://www.spmlsu.org/"> Society of Peer Mentors (SPM)</a>
                             at LSU. As Point Secretary I maintain accurate records of 141 undergraduate students’
                             involvement
                             in K-12 outreach activities and help organize our monthly meetings. Pictured to the left is
-                            me with the other members of my house within SPM.I also help to represent LSU's undergraduate
-                            research initiatives office, LSU Discover, as an
-                            <a href="https://lsu.edu/discover/students/research-ambassadors.php">LSU Research Ambassador</a>.
-                            <br><br>
+                            me with a group of SPM mentors.
                         </p>
                     </div>
                 </div>
                 <p align="left" style="font-size:16px">
                 </p>
             </div>
-        </div>
-        <div class="text">
-            <div id="roundbox">
-                <h3>Written Samples</h3>
-                <p align="center" style="font-size:16px">
-                    The following are examples of written work I have written/contributed to for conference
-                    presentations:<br><br>
-                </p>
-                <p align="left" style="font-size:16px">
-                    • Paper Resulting From Our Csc 4700 Class Project: <a
-                        href="https://dl.acm.org/doi/10.1145/3595353.3595886" style="">Soares, N., Seiden, S., Baggili,
-                    I., & Webb, A. (2023, July). On the Application of Synthetic Media to Penetration Testing. In <i>Proceedings
-                        of the 2nd Workshop on Security Implications of Deepfakes and Cheapfakes </i> (pp.
-                    1-10).</a><br><br>
-                    • Poster Presentation Abstract From the LSU MIST Lab: <a
-                        href="https://www.ieee-security.org/TC/SP2023/downloads/SP23-posters/sp23-posters-paper34-final_version_2_page_abstract.pdf"
-                        style="">Seiden, S., Huang, L., & Wang, C. Poster: Snooping Online Form Choice Privacy in Video
-                    Calls. pp. 1-10).</a>
-                </p>
-                </a><br>
-            </div>
-        </div>
-        <div class="popup" id="ricePoster">
-            <div class="popup-content" id="roundbox">
-                <span class="close">&times;</span>
-                <div class="container-iframe">
-                    <iframe class="responsive-iframe" frameBorder="0"
-                            src="https://www.files.sseiden.com/Posters/Decoding_Poseidon.pdf"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="popup" id="mistPoster">
-            <div class="popup-content" id="roundbox">
-                <span class="close">&times;</span>
-                <div class="container-iframe">
-                    <iframe class="responsive-iframe" frameBorder="0"
-                            src="https://www.files.sseiden.com/Posters/Snooping_Form_Choices.pdf"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="text">
-            <div id="roundbox">
-                <h3>Spoken</h3>
-                <p align="center" style="font-size:16px">Coming Soon!</p>
-            </div>
-        </div>
-        <div class="text">
-            <div id="roundbox">
-                <h3>Poster Presentations</h3>
-                <p align="center" style="font-size:16px">
-                    Below are examples of poster presentations I've presented.
-                </p>
-                <figure style="display: inline-block; width: 40%">
-                    <img alt='Presenting a Poster Presentation on my work at Rice University to a group of people'
-                         class="photo"
-                         src='images/posterRice.png' style="width: 100%"/>
-                    <u><a class="showPopupText" id="showRicePoster"><br>Poster Presentation on My Work at Rice
-                        University</a></u>
-                </figure>
-                <figure style="display: inline-block;">
-                    <img alt='Standing in Front of a Poster Presentation of My Webcam Privacy Work in the LSU MIST Lab'
-                         class="photo"
-                         src='images/posterDD.png' style="width: 100%"/>
-                    <u><a class="showPopupText" id="showMistPoster"><br>Poster Presentation of My Webcam <br>Privacy
-                        Work in the LSU MIST Lab</a></u>
-                </figure>
-            </div>
-        </div>
-        <div class="text">
-            <div id="roundbox">
-                <h3>Advertisements</h3>
-                <p align="center" style="font-size:16px">
-                    Below are examples of advertisements I created during my time as an officer of Effective Altruism at
-                    LSU.
-                </p>
-                <div class="photo-container"
-                     style="padding-top: 2%; padding-bottom: 4%; padding-left: 4%;padding-right: 4%">
-                    <img alt="Concepts Workshop Advertisement" class="photo" src="images/ea1.png">
-                    <img alt="Games Night Advertisement" class="photo" src="images/ea2.png">
-                    <img alt="Idea Program Advertisement" class="photo" src="images/ea3.png">
-                </div>
-                <div class="photo-container" style="padding-bottom: 4%;padding-left: 4%;padding-right: 4%">
-                    <img alt="Summer Program Infopost" class="photo" src="images/ea4.png">
-                    <img alt="Summer Program Advertisement" class="photo" src="images/ea5.png">
-                    <img alt="Kickoff Meeting Advertisement" class="photo" src="images/ea6.png">
-                </div>
-            </div>
-        </div>
+        </div> <br>
+
         <!-- <div class="text">
            <div id="roundbox">
 

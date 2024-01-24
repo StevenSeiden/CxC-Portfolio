@@ -56,17 +56,9 @@ img {
     height: 100%;
     padding-bottom: -10%;
 }
-#roundbox {
-    margin-left: 20%;
-    margin-right: 20%;
-    position: static
-}
+
 @media screen and (max-width: 1250px) {
-    #roundbox {
-        margin-left: 315px;
-        margin-right: 0;
-        margin-left: 0;
-    }
+
 }
 .photo-container {
     display: flex;
@@ -100,12 +92,14 @@ a:hover {
 }
 
 html, body {
-    background-image: url("../background.png");
+    background-color: #00002B;
+    background-image: unset;
 }
 
 /*Light mode*/
 @media (prefers-color-scheme: light) {
     html, body {
-        background-image: url("../background-light.png");
+        background-color: #B0A2D6;
+        background-image: unset;
     }
 }
